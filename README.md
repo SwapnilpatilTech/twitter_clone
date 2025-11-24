@@ -8,6 +8,11 @@
 
 <h2>🚀 Project Overview</h2>
 
+  <img src="https://github.com/SwapnilpatilTech/twitter_clone/blob/350840671136dbca304a3af7228e3353b27bc92f/Screenshot%202025-11-24%20222232.png" width="100%">
+
+  
+  <img src="https://github.com/SwapnilpatilTech/twitter_clone/blob/7770646802b2039c15fb003b01d6a020eca3f2f3/tweeter%20-%20Made%20with%20Clipchamp.gif" width="100%">
+
 <p>
   Build a <b>Mini Twitter Home Page</b> where users can:
 </p>
