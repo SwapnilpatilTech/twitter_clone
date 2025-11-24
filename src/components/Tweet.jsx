@@ -1,7 +1,5 @@
 import { useState } from 'react';
 
-// ----- SVG ICONS -----
-
 const MoreIcon = () => (
   <svg className="w-5 h-5 text-gray-500" viewBox="0 0 24 24" fill="currentColor">
     <circle cx="5" cy="12" r="2" />
