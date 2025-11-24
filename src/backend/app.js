@@ -51,7 +51,7 @@ function check_tweet(text) {
 }
 
 app.get("/", (req, res) => {
-    res.send("Twitter API is running ✔️");
+    res.send("Twitter API is running");
 });
 
 app.get("/api/tweets", (req, res) => {
