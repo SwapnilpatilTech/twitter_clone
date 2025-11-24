@@ -11,7 +11,6 @@ const data_file = path.join(__dirname, "data", "tweets.json");
 const log_folder = path.join(__dirname, "logs");
 const log_file = path.join(log_folder, "server.log");
 
-// create logs directory if missing
 if (!fs.existsSync(log_folder)) {
     fs.mkdirSync(log_folder, { recursive: true });
 }
@@ -51,9 +50,6 @@ function check_tweet(text) {
     return null;
 }
 
-// ------------------------------------------------------------------
-// home route
-// ------------------------------------------------------------------
 app.get("/", (req, res) => {
     res.send("Twitter API is running ✔️");
 });
