@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import { TweetComposer } from './TweetComposer';
 import { Tweet } from './Tweet';
 
-// Sparkles icon
 const SparklesIcon = () => (
   <svg
     viewBox="0 0 24 24"
@@ -55,7 +54,6 @@ export const Feed = () => {
     }
   };
 
-  // UPDATE TWEET (fixed PUT → PATCH)
   const handleEditTweet = async (id, newTweet) => {
     try {
       const response = await fetch(`http://localhost:3000/api/tweets/${id}`, {
