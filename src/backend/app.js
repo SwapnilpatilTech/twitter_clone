@@ -74,7 +74,7 @@ app.get("/api/tweets/:id", (req, res) => {
 app.post("/api/tweets", (req, res) => {
     const { username, tweet } = req.body;
 
-    // username required
+    
     if (!username || username.trim() === "") {
         return res.status(400).json({ error: "Username is required" });
     }
