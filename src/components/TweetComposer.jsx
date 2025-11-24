@@ -13,7 +13,6 @@ export const TweetComposer = ({ onTweetSubmit }) => {
   const [charCount, setCharCount] = useState(0);
   const maxChars = 280;
 
-  // Save username as user types
   useEffect(() => {
     try {
       if (username.trim()) {
