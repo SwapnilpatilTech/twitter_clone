@@ -79,13 +79,13 @@ app.post("/api/tweets", (req, res) => {
         return res.status(400).json({ error: "Username is required" });
     }
 
-    // tweet validation
+    
     const error = check_tweet(tweet);
     if (error) return res.status(400).json({ error });
 
     const tweets = read_data();
 
-    // avoid duplicate tweet from same user
+
     const duplicate = tweets.find(
         (t) => t.username === username && t.tweet === tweet
     );
@@ -118,14 +118,14 @@ app.patch("/api/tweets/:id", (req, res) => {
         return res.status(404).json({ error: "Tweet not found" });
     }
 
-    // validate tweet if included
+    
     if (tweet !== undefined) {
         const err = check_tweet(tweet);
         if (err) return res.status(400).json({ error: err });
         tweets[index].tweet = tweet;
     }
 
-    // validate username if included
+    
     if (username !== undefined) {
         if (!username.trim()) {
             return res.status(400).json({ error: "Username cannot be empty" });
