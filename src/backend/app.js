@@ -4,9 +4,6 @@ import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
 
-// ------------------------------------------------------------------
-// basic path setup
-// ------------------------------------------------------------------
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -19,16 +16,10 @@ if (!fs.existsSync(log_folder)) {
     fs.mkdirSync(log_folder, { recursive: true });
 }
 
-// ------------------------------------------------------------------
-// express app setup
-// ------------------------------------------------------------------
 export const app = express();
 app.use(cors());
 app.use(express.json());
 
-// ------------------------------------------------------------------
-// simple logger (writes to logs/server.log)
-// ------------------------------------------------------------------
 app.use((req, res, next) => {
     const timestamp = new Date().toISOString();
     const log_text = `[${timestamp}] ${req.method} ${req.url}\n`;
@@ -40,9 +31,6 @@ app.use((req, res, next) => {
     next();
 });
 
-// ------------------------------------------------------------------
-// helper functions
-// ------------------------------------------------------------------
 function read_data() {
     if (!fs.existsSync(data_file)) return [];
     try {
@@ -70,17 +58,11 @@ app.get("/", (req, res) => {
     res.send("Twitter API is running ✔️");
 });
 
-// ------------------------------------------------------------------
-// get all tweets
-// ------------------------------------------------------------------
 app.get("/api/tweets", (req, res) => {
     const tweets = read_data();
     res.json(tweets);
 });
 
-// ------------------------------------------------------------------
-// get a tweet by id
-// ------------------------------------------------------------------
 app.get("/api/tweets/:id", (req, res) => {
     const id = Number(req.params.id);
     const tweets = read_data();
@@ -93,9 +75,6 @@ app.get("/api/tweets/:id", (req, res) => {
     res.json(found);
 });
 
-// ------------------------------------------------------------------
-// create a new tweet
-// ------------------------------------------------------------------
 app.post("/api/tweets", (req, res) => {
     const { username, tweet } = req.body;
 
@@ -132,9 +111,6 @@ app.post("/api/tweets", (req, res) => {
     res.status(201).json(new_tweet);
 });
 
-// ------------------------------------------------------------------
-// update a tweet (patch)
-// ------------------------------------------------------------------
 app.patch("/api/tweets/:id", (req, res) => {
     const id = Number(req.params.id);
     const { username, tweet } = req.body;
@@ -169,9 +145,6 @@ app.patch("/api/tweets/:id", (req, res) => {
     res.json(tweets[index]);
 });
 
-// ------------------------------------------------------------------
-// delete a tweet
-// ------------------------------------------------------------------
 app.delete("/api/tweets/:id", (req, res) => {
     const id = Number(req.params.id);
     let tweets = read_data();
