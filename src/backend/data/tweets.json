@@ -1,0 +1,25 @@
+[
+  {
+    "id": 1763968914763,
+    "username": "Rohit",
+    "tweet": "Coding with DSA.",
+    "isEdited": false,
+    "createdAt": "2025-11-24T07:21:54.763Z",
+    "isedited": true,
+    "updatedat": "2025-11-24T16:39:29.731Z"
+  },
+  {
+    "id": 1764001261465,
+    "username": "Swapnil",
+    "tweet": "Playing DJ",
+    "isedited": false,
+    "createdat": "2025-11-24T16:21:01.465Z"
+  },
+  {
+    "id": 1764002591635,
+    "username": "ywgsdjkb",
+    "tweet": "fghjkl",
+    "isedited": false,
+    "createdat": "2025-11-24T16:43:11.635Z"
+  }
+]
