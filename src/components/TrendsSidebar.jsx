@@ -1,5 +1,3 @@
-// All icons replaced with inline SVG versions.
-
 const SearchIcon = () => (
   <svg
     className="absolute left-4 top-3 w-5 h-5 text-gray-500"
