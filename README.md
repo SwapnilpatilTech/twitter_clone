@@ -13,6 +13,8 @@
   
   <img src="https://github.com/SwapnilpatilTech/twitter_clone/blob/7770646802b2039c15fb003b01d6a020eca3f2f3/tweeter%20-%20Made%20with%20Clipchamp.gif" width="100%">
 
+
+Output video:https://drive.google.com/file/d/15soOJB5mCp2cqiNHBaT4KkOWOmB0qVPn/view?usp=sharing
 <p>
   Build a <b>Mini Twitter Home Page</b> where users can:
 </p>
