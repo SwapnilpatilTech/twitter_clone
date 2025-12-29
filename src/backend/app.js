@@ -4,9 +4,7 @@ import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
 
-// ------------------------------------------------------------------
-// basic path setup
-// ------------------------------------------------------------------
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -132,9 +130,6 @@ app.post("/api/tweets", (req, res) => {
     res.status(201).json(new_tweet);
 });
 
-// ------------------------------------------------------------------
-// update a tweet (patch)
-// ------------------------------------------------------------------
 app.patch("/api/tweets/:id", (req, res) => {
     const id = Number(req.params.id);
     const { username, tweet } = req.body;
@@ -169,9 +164,6 @@ app.patch("/api/tweets/:id", (req, res) => {
     res.json(tweets[index]);
 });
 
-// ------------------------------------------------------------------
-// delete a tweet
-// ------------------------------------------------------------------
 app.delete("/api/tweets/:id", (req, res) => {
     const id = Number(req.params.id);
     let tweets = read_data();
